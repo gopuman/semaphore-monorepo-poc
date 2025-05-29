@@ -29,4 +29,4 @@ blocks:
         - name: Turbo Full Dev Flow
           commands:
             - checkout
-            - npx turbo run lint build
+            - npx turbo run dev
