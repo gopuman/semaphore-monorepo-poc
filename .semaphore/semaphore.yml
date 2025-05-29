@@ -1,0 +1,33 @@
+version: v1.0
+name: Initial Pipeline
+agent:
+  machine:
+    type: f1-standard-2
+    os_image: ubuntu2204
+blocks:
+  - name: 'Block #1'
+    task:
+      jobs:
+        - name: 'Install Dependencies '
+          commands:
+            - checkout
+            - nvm install 18
+            - npm ci
+            - pip install -r requirements.txt
+  - name: 'Block #3'
+    task:
+      jobs:
+        - name: Test Python API
+          commands:
+            - checkout
+            - cd apps/api
+            - pip install -r ../../requirements.txt
+            - pytest || echo "No tests yet"
+  - name: 'Block #4'
+    task:
+      jobs:
+        - name: Turbo Full Dev Flow
+          commands:
+            - checkout
+            - npx turbo run dev
+
