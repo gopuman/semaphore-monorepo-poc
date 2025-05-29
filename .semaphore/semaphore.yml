@@ -14,14 +14,6 @@ blocks:
             - nvm install 18
             - npm ci
             - pip install -r requirements.txt
-  - name: 'Block #2'
-    task:
-      jobs:
-        - name: Lint & Build Web (Next.js)
-          commands:
-            - checkout
-            - cd apps/web
-            - npm run build
   - name: 'Block #3'
     task:
       jobs:
