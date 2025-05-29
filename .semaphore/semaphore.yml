@@ -19,7 +19,7 @@ blocks:
       jobs:
         - name: Lint & Build Web (Next.js)
           commands:
-            - ls
+            - checkout
             - cd apps/web
             - npm run lint
             - npm run build
@@ -28,6 +28,7 @@ blocks:
       jobs:
         - name: Test Python API
           commands:
+            - checkout
             - cd apps/api
             - pip install -r ../../requirements.txt
             - pytest || echo "No tests yet"
@@ -36,4 +37,5 @@ blocks:
       jobs:
         - name: Turbo Full Dev Flow
           commands:
+            - checkout
             - npx turbo run lint build
