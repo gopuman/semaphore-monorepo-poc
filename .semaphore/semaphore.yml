@@ -29,5 +29,5 @@ blocks:
         - name: Turbo Full Dev Flow
           commands:
             - checkout
-            - npx turbo run dev
+            - turbo run dev
 
