@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/turbo,nextjs,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=turbo,nextjs,python
 
+apps/web/.next/*
+
 ### NextJS ###
 # dependencies
 /node_modules
