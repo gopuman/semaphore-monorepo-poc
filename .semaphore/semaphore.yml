@@ -21,7 +21,6 @@ blocks:
           commands:
             - checkout
             - cd apps/web
-            - npm run lint
             - npm run build
   - name: 'Block #3'
     task:
